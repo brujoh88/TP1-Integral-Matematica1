@@ -38,4 +38,3 @@ def decimal_a_binario():
     
     recursos.pausar()
     
-decimal_a_binario()
