@@ -14,9 +14,7 @@ def positivo_a_binario(numero):
 #def negativo_a_binario(numero):
     bits = int(input("Ingrese la cantidad de bits: "))
     bin_del_absoluto = positivo_a_binario(abs(numero))
-    longitud = len(bin_del_absoluto)
-    diferencia = bits - longitud
-    for i in range(diferencia):
+    while len(bin_del_absoluto) < bits:    #Se agregan ceros hasta completar la cantidad de bits
          bin_del_absoluto = "0" + str(bin_del_absoluto)
     binario = flor.binario_a_complemento_dos(bin_del_absoluto)
     return binario
