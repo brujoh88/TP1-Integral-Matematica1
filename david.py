@@ -28,7 +28,7 @@ def decimal_a_binario():
     Ingrese el número natural que desea convertir a binario:""")   
     numero = int(input())
     if numero == 0:
-        binario = 0
+        binario = "0"
     #elif numero < 0:
         #binario = negativo_a_binario(numero)
     else:
