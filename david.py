@@ -1,5 +1,4 @@
 import recursos
-import flor
 
 #Función que permite convertir números del sistema decimal a sistema binario, octal o hexadecimal, y devuelve el valor como cadena:
 #argumento "sistema" debe ser la base del sistema numérico al que se convertirá(2, 8 o 16). "numero" es el número decimal a convertir.
@@ -17,29 +16,21 @@ def positivo_a_binario(numero):
     binario = convertir_decimal_a_eleccion(2, numero)
     return binario
 
-#Funcion a usar si es negativo (falta la funcion de complemento a2)
-#def negativo_a_binario(numero):
-    #bits = int(input("Ingrese la cantidad de bits: "))
-    #bin_del_absoluto = positivo_a_binario(abs(numero))
-    #while len(bin_del_absoluto) < bits:    #Se agregan ceros hasta completar la cantidad de bits
-        #bin_del_absoluto = "0" + bin_del_absoluto
-    #binario = flor.binario_a_complemento_dos(bin_del_absoluto)
-    #return binario
-
 #Función principal que solicita el dato al usuario y al final mostrará el resultado en pantalla.
 def decimal_a_binario():
     recursos.limpiar_pantalla()
     print("""====SISTEMA DECIMAL A BINARIO ==== 
-\nIngrese el número entero que desea convertir a binario:""")  
+\nIngrese el número entero positivo que desea convertir a binario:""")  
     try: 
         numero = int(input())
-        if numero == 0:
-            binario = "0"
-        #elif numero < 0:
-            #binario = negativo_a_binario(numero)
+        if numero < 0:
+            print("Error. De momento el programa solo acepta números positivos.")
         else:
-            binario = positivo_a_binario(numero)       
-        print(f"\nEl número ingresado es {binario} en binario.")
+            if numero == 0:
+                binario = "0"
+            else:
+                binario = positivo_a_binario(numero)       
+            print(f"\nEl número decimal {numero}  es {binario} en binario.")
     except ValueError:
          print("\nError. Valor incorrecto.")   
     recursos.pausar()
