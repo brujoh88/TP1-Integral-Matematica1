@@ -18,7 +18,7 @@ def mostrar_menu():
     print("2. Conversión de decimal a binario")
     print("3. Conversión de decimal a hexadecimal")
     print("4. Conversión de decimal a octal")
-    print("5. De binario a complemento a dos")
+    print("5. Suma de numeros binarios")
     print("0. Salir")
     
     opcion = input("\nSeleccione una opción: ")
