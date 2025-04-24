@@ -20,7 +20,7 @@ def main():
         elif opcion == "4":
             santi.decimal_a_octal()
         elif opcion == "5":
-            flor.binario_a_complemento_dos()
+            flor.suma_binarios()
         elif opcion == "0":
             recursos.limpiar_pantalla()
             print("Gracias por utilizar el sistema. ¡Hasta pronto!")            
