@@ -20,7 +20,7 @@ def decimal_a_hexadecimal():
     recursos.limpiar_pantalla()
     print("==== DECIMAL A HEXADECIMAL ====")
 
-    entrada = input("Introduce un número entero: ").strip()
+    entrada = input("Introduce un número entero: ")
 
     if not entrada:
         print("Error: La entrada no puede estar vacía.")
