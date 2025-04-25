@@ -11,11 +11,6 @@ def convertir_decimal_a_eleccion(sistema, numero):
         conversion = caracteres[resto] + conversion
     return conversion
 
-#Funcion a usar si es un número positivo
-def positivo_a_binario(numero):
-    binario = convertir_decimal_a_eleccion(2, numero)
-    return binario
-
 #Función principal que solicita el dato al usuario y al final mostrará el resultado en pantalla.
 def decimal_a_binario():
     recursos.limpiar_pantalla()
@@ -29,7 +24,7 @@ def decimal_a_binario():
             if numero == 0:
                 binario = "0"
             else:
-                binario = positivo_a_binario(numero)       
+                binario = convertir_decimal_a_eleccion(2,numero)       
             print(f"\nEl número decimal {numero}  es {binario} en binario.")
     except ValueError:
          print("\nError. Valor incorrecto.")   
